@@ -38,8 +38,21 @@ public class DepartmentTest {
         assertEquals(description, testDepartment().getDescription());
     }
 
+    @Test
     public void getNumberOfEmployeesReturnsNumberOfEmployeesInADepartment_12(){
         Department newDepartment = testDepartment();
         assertEquals(12, newDepartment.getNoOfEmployees());
     }
+
+    @Test
+    public void setterMethodsWorkCorrectlyInSettingNewValues(){
+        Department newDepartment = testDepartment();
+        newDepartment.setDeptname("Hr");
+        newDepartment.setDescription("employee affairs");
+        newDepartment.setNoOfEmployees(2);
+        assertEquals("Hr", newDepartment.getDeptname());
+        assertEquals("employee affairs", newDepartment.getDescription());
+        assertEquals(2, newDepartment.getNoOfEmployees());
+    }
+
 }
