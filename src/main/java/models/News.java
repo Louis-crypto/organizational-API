@@ -3,8 +3,8 @@ package models;
 import java.util.Objects;
 
 public class News {
-    private String topic;
-    private String content;
+    public String topic;
+    public String content;
     private int id;
 
     @Override
