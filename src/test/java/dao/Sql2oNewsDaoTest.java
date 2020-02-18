@@ -50,19 +50,19 @@ public class Sql2oNewsDaoTest {
 
     @Test
     public void newsCanBeFoundById() throws Exception{
-        Department department = testDepartment();
-        departmentDao.add(department);
-        Department foundDepartment = departmentDao.findById(department.getId());
-        assertEquals(department, foundDepartment);
+        News news = generalNews();
+        newsDao.add(news);
+        News foundNews = newsDao.findById(news.getId());
+        assertEquals(news, foundNews);
     }
 
     @Test
-    public void getAllDepartmentReturnsAllCreatedDepartments() throws Exception{
-        Department department = testDepartment();
-        Department anotherDepartment = new Department("hr", "deals with all employees", 4);
-        departmentDao.add(department);
-        departmentDao.add(anotherDepartment);
-        assertEquals(2, departmentDao.getAll().size());
+    public void getAllNewsReturnsGeneralAndDepartmentNews() throws Exception{
+        News news = generalNews();
+        DepartmentNews departmentNews = deptNews1();
+        newsDao.add(news);
+        newsDao.add(departmentNews);
+        assertEquals(2, newsDao.getAll().size());
     }
 
     @Test
