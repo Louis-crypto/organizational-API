@@ -14,11 +14,11 @@ public interface DepartmentDao {
     Department findById(int id);
 
     //update
-    //tobedone later
+    void update(int id, String deptName, String description, int noOfEmployees);
 
     //delete
     void deleteById(int id);
-    void clearAll();
+    void clearAllDepartments();
 
     List<Employee> getAllEmployeesInADept(int deptId);
 }
