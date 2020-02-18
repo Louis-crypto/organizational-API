@@ -28,4 +28,11 @@ public class DepartmentNewsTest {
         news.setDeptId(2);
         assertEquals(2, news.getDeptId());
     }
+
+    @Test
+    public void getNewsTypeReturnsCorrectType(){
+        DepartmentNews news = testNews();
+        String newsConstant = "Departmental";
+        assertEquals(newsConstant, testNews().getDatabaseType());
+    }
 }

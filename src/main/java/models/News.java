@@ -6,6 +6,7 @@ public class News {
     public String topic;
     public String content;
     private int id;
+    public static final String DATABASE_TYPE = "General";
 
     @Override
     public boolean equals(Object o) {
@@ -25,6 +26,7 @@ public class News {
     public News(String topic, String content){
         this.topic = topic;
         this.content = content;
+        String type = DATABASE_TYPE;
     }
 
     public String getTopic() {
@@ -41,6 +43,10 @@ public class News {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public static String getDatabaseType() {
+        return DATABASE_TYPE;
     }
 
     public int getId() {

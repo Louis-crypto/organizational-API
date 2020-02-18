@@ -1,5 +1,6 @@
 package dao;
 import models.Department;
+import models.DepartmentNews;
 import models.Employee;
 
 import java.util.List;
@@ -21,4 +22,5 @@ public interface DepartmentDao {
     void clearAllDepartments();
 
     List<Employee> getAllEmployeesInADept(int deptId);
+//    List<DepartmentNews> getAllNewsInADept(int deptId);
 }
