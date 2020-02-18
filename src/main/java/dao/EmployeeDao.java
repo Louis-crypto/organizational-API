@@ -11,10 +11,13 @@ public interface EmployeeDao {
     //read
     List<Employee> getAll();
 
+    // READ
+    Employee findById(int id);
+
     //update
     //omit for now
 
     //delete
     void deleteById(int id);
-    void clearAll();
+    void clearAllEmployees();
 }
