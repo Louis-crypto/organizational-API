@@ -31,7 +31,7 @@ public class Sql2oEmployeeDaoTest {
     }
 
     @Test
-    public void addingAnEmployeeSetsId() throws Exception{
+    public void databaseSetsIdWhenEmployeeIsAdded() throws Exception{
         Employee employee = testEmployee();
         int employeeId = employee.getId();
         employeeDao.add(employee);
@@ -39,14 +39,14 @@ public class Sql2oEmployeeDaoTest {
     }
 
     @Test
-    public void listOfAllEmployeesCanBeRetrived() throws Exception{
+    public void listOfAllEmployeesCanBeRetrievedByGetAll() throws Exception{
         Employee employee = testEmployee();
         employeeDao.add(employee);
         assertEquals(1, employeeDao.getAll().size());
     }
 
     @Test
-    public void ifNoEmployeeReturnsZero() throws Exception{
+    public void ifNoEmployeeExistsReturnsZero() throws Exception{
         assertEquals(0, employeeDao.getAll().size());
     }
 

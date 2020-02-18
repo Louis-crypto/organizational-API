@@ -42,7 +42,7 @@ public class Sql2oDepartmentDaoTest {
     }
 
     @Test
-    public void departmentCanFindDepartmentById() throws Exception{
+    public void findByIdCanFindDepartmentById() throws Exception{
         Department department = testDepartment();
         departmentDao.add(department);
         Department foundDepartment = departmentDao.findById(department.getId());
@@ -50,7 +50,7 @@ public class Sql2oDepartmentDaoTest {
     }
 
     @Test
-    public void getAllDepartmentRetunsAllCreatedDepartments() throws Exception{
+    public void getAllDepartmentReturnsAllCreatedDepartments() throws Exception{
         Department department = testDepartment();
         Department anotherDepartment = new Department("hr", "deals with all employees", 4);
         departmentDao.add(department);
@@ -64,7 +64,7 @@ public class Sql2oDepartmentDaoTest {
     }
 
     @Test
-    public void updateDepartmentInformation() throws Exception{
+    public void updateMethodupdatesDepartmentInformation() throws Exception{
         Department department = testDepartment();
         departmentDao.add(department);
         departmentDao.update(department.getId(), "security", "safety first", 4);
