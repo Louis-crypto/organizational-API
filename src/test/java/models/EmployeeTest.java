@@ -34,8 +34,8 @@ public class EmployeeTest {
 
     @Test
     public void getPositionReturnsPosition(){
-        String position = testEmployee().getPosition();
-        assertEquals(position, testEmployee().getPosition());
+        String position = testEmployee().getEmployeePosition();
+        assertEquals(position, testEmployee().getEmployeePosition());
     }
 
     @Test
@@ -48,10 +48,10 @@ public class EmployeeTest {
     public void setterMethodsWorkCorrectlyInSettingNewValues(){
         Employee newEmployee = testEmployee();
         newEmployee.setEmployeeName("one");
-        newEmployee.setPosition("mid-level");
+        newEmployee.setEmployeePosition("mid-level");
         newEmployee.setDeptId(2);
         assertEquals("one", newEmployee.getEmployeeName());
-        assertEquals("mid-level", newEmployee.getPosition());
+        assertEquals("mid-level", newEmployee.getEmployeePosition());
         assertEquals(2, newEmployee.getDeptId());
     }
 }

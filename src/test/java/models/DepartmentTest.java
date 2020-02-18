@@ -29,7 +29,7 @@ public class DepartmentTest {
     @Test
     public void getDeptNameReturnsDeptName_finance(){
         Department newDepartment = testDepartment();
-        assertEquals("Finance", newDepartment.getDeptname());
+        assertEquals("Finance", newDepartment.getDeptName());
     }
 
     @Test
@@ -47,10 +47,10 @@ public class DepartmentTest {
     @Test
     public void setterMethodsWorkCorrectlyInSettingNewValues(){
         Department newDepartment = testDepartment();
-        newDepartment.setDeptname("Hr");
+        newDepartment.setDeptName("Hr");
         newDepartment.setDescription("employee affairs");
         newDepartment.setNoOfEmployees(2);
-        assertEquals("Hr", newDepartment.getDeptname());
+        assertEquals("Hr", newDepartment.getDeptName());
         assertEquals("employee affairs", newDepartment.getDescription());
         assertEquals(2, newDepartment.getNoOfEmployees());
     }

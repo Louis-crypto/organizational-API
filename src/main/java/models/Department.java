@@ -3,7 +3,7 @@ package models;
 import java.util.Objects;
 
 public class Department {
-    private String Deptname;
+    private String deptName;
     private String description;
     private int noOfEmployees;
     private int id;
@@ -16,27 +16,27 @@ public class Department {
         Department that = (Department) o;
         return noOfEmployees == that.noOfEmployees &&
                 id == that.id &&
-                Objects.equals(Deptname, that.Deptname) &&
+                Objects.equals(deptName, that.deptName) &&
                 Objects.equals(description, that.description);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(Deptname, description, noOfEmployees, id);
+        return Objects.hash(deptName, description, noOfEmployees, id);
     }
 
-    public Department(String Deptname, String description, int noOfEmployees){
-        this.Deptname = Deptname;
+    public Department(String deptName, String description, int noOfEmployees){
+        this.deptName = deptName;
         this.description = description;
         this.noOfEmployees = noOfEmployees;
     }
 
-    public String getDeptname() {
-        return Deptname;
+    public String getDeptName() {
+        return deptName;
     }
 
-    public void setDeptname(String deptname) {
-        Deptname = deptname;
+    public void setDeptName(String deptName) {
+        this.deptName = deptName;
     }
 
     public String getDescription() {
