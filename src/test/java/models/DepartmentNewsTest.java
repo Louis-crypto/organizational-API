@@ -37,16 +37,16 @@ public class DepartmentNewsTest{
 
     @Test
     public void departmentNewsGetsContentCorectly_five(){
-        News news1 = testNews();
-        assertEquals("12345", news1.getContent());
+        DepartmentNews departmentNews = testNews();
+        assertEquals("five", departmentNews.getContent());
     }
 
     @Test
     public void settersWorkCorrectlyInSettingNewValues(){
-        News news1 = testNews();
-        news1.setTopic("two");
-        news1.setContent("6789");
-        assertEquals("two", news1.getTopic());
-        assertEquals("6789", news1.getContent());
+        DepartmentNews departmentNews = testNews();
+        departmentNews.setTopic("two");
+        departmentNews.setContent("6789");
+        assertEquals("two", departmentNews.getTopic());
+        assertEquals("6789", departmentNews.getContent());
     }
 }
