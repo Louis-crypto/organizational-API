@@ -1,13 +1,31 @@
 package models;
 
-public class DepartmentNews extends News {
+public class DepartmentNews{
+    private String topic;
+    private String content;
     private int deptId;
     private int id;
-    public static final String DATABASE_TYPE = "Departmental";
+
     public DepartmentNews(String topic, String content, int deptId) {
-        super(topic, content);
+        this.topic = topic;
+        this.content = content;
         this.deptId = deptId;
-        String type = DATABASE_TYPE;
+    }
+
+    public String getTopic() {
+        return topic;
+    }
+
+    public void setTopic(String topic) {
+        this.topic = topic;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public int getDeptId() {
@@ -18,16 +36,10 @@ public class DepartmentNews extends News {
         this.deptId = deptId;
     }
 
-    public static String getDatabaseType() {
-        return DATABASE_TYPE;
-    }
-
-    @Override
     public int getId() {
         return id;
     }
 
-    @Override
     public void setId(int id) {
         this.id = id;
     }

@@ -55,8 +55,10 @@ public class Sql2oNewsDaoTest {
     @Test
     public void getAllNewsReturnsGeneralAndDepartmentNews() throws Exception{
         News news = generalNews();
+        News news1 = new News("1234","4567");
         newsDao.addGeneral(news);
-        assertEquals(1, newsDao.getAllGeneral().size());
+        newsDao.addGeneral(news1);
+        assertEquals(2, newsDao.getAllGeneral().size());
     }
 
     @Test

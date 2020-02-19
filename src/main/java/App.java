@@ -89,5 +89,11 @@ public class App {
             res.status(201);
             return gson.toJson(news);
         });
+
+//        get: show all generalNews
+        get("/news", "application/json", (req, res)->{
+            return gson.toJson(newsDao.getAllGeneral());
+        });
+
     }
 }
