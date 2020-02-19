@@ -37,11 +37,11 @@ public class NewsTest {
         assertEquals("6789", news1.getContent());
     }
 
-    @Test
-    public void constantIsReturnedAsDatabaseType(){
-        News news1 = testNews();
-        String constantType = "General";
-        assertEquals(constantType, news1.getDatabaseType());
-    }
+//    @Test
+//    public void constantIsReturnedAsDatabaseType(){
+//        News news1 = testNews();
+//        String constantType = "General";
+//        assertEquals(constantType, news1.getDatabaseType());
+//    }
 
 }
