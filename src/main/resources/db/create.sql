@@ -19,3 +19,10 @@ CREATE TABLE IF NOT EXISTS news (
  topic VARCHAR,
  content VARCHAR,
 );
+
+CREATE TABLE IF NOT EXISTS departmentsNews (
+ id int PRIMARY KEY auto_increment,
+ topic VARCHAR,
+ content VARCHAR,
+ deptId INTEGER
+);
