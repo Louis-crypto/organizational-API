@@ -1,6 +1,5 @@
 package dao;
 
-import models.Department;
 import models.DepartmentNews;
 import models.News;
 import org.junit.*;
@@ -53,7 +52,7 @@ public class Sql2oNewsDaoTest {
     }
 
     @Test
-    public void getAllNewsReturnsGeneralAndDepartmentNews() throws Exception{
+    public void getAllNewsReturnsGeneralNews() throws Exception{
         News news = generalNews();
         News news1 = new News("1234","4567");
         newsDao.addGeneral(news);
