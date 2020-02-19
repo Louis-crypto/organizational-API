@@ -1,7 +1,5 @@
 package dao;
 
-import models.Department;
-import models.DepartmentNews;
 import models.News;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
@@ -30,20 +28,7 @@ public class Sql2oNewsDao implements NewsDao {
         }
     }
 
-//    @Override
-//    public void addDepartmental(DepartmentNews departmentNews) {
-//        String sql = "INSERT INTO news (topic, content, type, deptId) VALUES (:topic, :content, :type, :deptId)";
-//        try(Connection con = sql2o.open()){
-//            int id = (int) con.createQuery(sql, true)
-//                    .bind(departmentNews)
-//                    .throwOnMappingFailure(false)
-//                    .executeUpdate()
-//                    .getKey();
-//            departmentNews.setId(id);
-//        } catch (Sql2oException ex) {
-//            System.out.println(ex);
-//        }
-//    }
+
 
     @Override
     public List<News> getAllGeneral() {
