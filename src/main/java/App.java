@@ -24,6 +24,8 @@ public class App {
 
         String connectionString = "jdbc:h2:~/organization.db;INIT=RUNSCRIPT from 'classpath:db/create.sql'";
         Sql2o sql2o = new Sql2o(connectionString, "", "");
+//        String connectionString = "jdbc:postgresql://localhost:5432/organizationapi";
+//        Sql2o sql2o = new Sql2o(connectionString, "mringaschool", "12345");
 
         employeeDao = new Sql2oEmployeeDao(sql2o);
         departmentDao = new Sql2oDepartmentDao(sql2o);

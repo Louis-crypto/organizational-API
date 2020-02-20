@@ -64,7 +64,7 @@ public class Sql2oDepartmentDaoTest {
     }
 
     @Test
-    public void updateMethodupdatesDepartmentInformation() throws Exception{
+    public void updatesDepartmentInformation() throws Exception{
         Department department = testDepartment();
         departmentDao.add(department);
         departmentDao.update(department.getId(), "security", "safety first", 4);
