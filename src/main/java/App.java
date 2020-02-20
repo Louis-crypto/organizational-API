@@ -1,8 +1,10 @@
 import com.google.gson.Gson;
+import dao.Sql2oDepartmentNewsDao;
 import dao.Sql2oEmployeeDao;
 import dao.Sql2oDepartmentDao;
 import dao.Sql2oNewsDao;
 import models.Department;
+import models.DepartmentNews;
 import models.Employee;
 import models.News;
 import org.sql2o.Connection;
@@ -15,6 +17,7 @@ public class App {
         Sql2oEmployeeDao employeeDao;
         Sql2oDepartmentDao departmentDao;
         Sql2oNewsDao newsDao;
+        Sql2oDepartmentNewsDao departmentNewsDao;
 
         Connection conn;
         Gson gson = new Gson();
@@ -25,6 +28,7 @@ public class App {
         employeeDao = new Sql2oEmployeeDao(sql2o);
         departmentDao = new Sql2oDepartmentDao(sql2o);
         newsDao = new Sql2oNewsDao(sql2o);
+        departmentNewsDao = new Sql2oDepartmentNewsDao(sql2o);
         conn = sql2o.open();
 
 //        post: create new department
@@ -95,5 +99,17 @@ public class App {
             return gson.toJson(newsDao.getAllGeneral());
         });
 
+//        post: create departmentNews
+        post("/departmentNews/new", "application/json", (req, res) ->{
+            DepartmentNews departmentNews = gson.fromJson(req.body(), DepartmentNews.class);
+            departmentNewsDao.addDepartmental(departmentNews);
+            res.status(201);
+            return gson.toJson(departmentNews);
+        });
+
+//        get: show all departmentNews
+        get("/departmentNews", "application/json", (req, res)->{
+            return gson.toJson(departmentNewsDao.getAllDepartmental());
+        });
     }
 }

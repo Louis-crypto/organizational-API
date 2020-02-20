@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS news (
  content VARCHAR,
 );
 
-CREATE TABLE IF NOT EXISTS departmentsNews (
+CREATE TABLE IF NOT EXISTS departmentNews (
  id int PRIMARY KEY auto_increment,
  topic VARCHAR,
  content VARCHAR,

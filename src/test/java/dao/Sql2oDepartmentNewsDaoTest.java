@@ -40,7 +40,7 @@ public class Sql2oDepartmentNewsDaoTest {
     }
 
     @Test
-    public void newsCanBeFoundById() throws Exception{
+    public void departmentNewsCanBeFoundById() throws Exception{
         DepartmentNews departmentNews = departmentNews();
         departmentNewsDao.addDepartmental(departmentNews);
         DepartmentNews foundNews = departmentNewsDao.findDepartmentalById(departmentNews.getId());
